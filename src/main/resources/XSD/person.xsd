@@ -1,0 +1,39 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns:tns="http://www.appt.com/set/web_api/soap/contribuyente" 
+targetNamespace="http://www.appt.com/set/web_api/soap/contribuyente" 
+elementFormDefault="qualified">
+
+
+    <!--GetRequest object contribuyente by field ruc-->
+    <xs:element name="getPersonRucRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name= "ruc" type="xs:string"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--GetResponse object contribuyente by field ruc-->
+    <xs:element name="getPersonRucResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name= "persondto" type="tns:personDto"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--Person object structure-->
+    <xs:complexType name="personDto">
+        <xs:sequence>
+            <xs:element name="personId" type="xs:long"></xs:element>
+            <xs:element name="name" type="xs:string"></xs:element>
+            <xs:element name="lastname" type="xs:string"></xs:element>
+            <xs:element name="ruc" type="xs:string"></xs:element>
+            <xs:element name="dv" type="xs:int"></xs:element>
+            <xs:element name="rucFormer" type="xs:string"></xs:element>
+            <xs:element name="state" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+
+</xs:schema>
