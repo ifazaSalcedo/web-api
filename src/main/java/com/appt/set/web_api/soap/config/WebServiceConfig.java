@@ -1,4 +1,4 @@
-package com.appt.set.web_api.config;
+package com.appt.set.web_api.soap.config;
 
 import java.util.Properties;
 
@@ -11,8 +11,8 @@ import org.springframework.ws.soap.server.endpoint.SoapFaultDefinition;
 import org.springframework.ws.soap.server.endpoint.SoapFaultMappingExceptionResolver;
 import org.springframework.ws.transport.http.MessageDispatcherServlet;
 
-import com.appt.set.web_api.exeptionsoap.DetailSoapFaultDefinitionExceptionResolver;
-import com.appt.set.web_api.exeptionsoap.ServiceFaultException;
+import com.appt.set.web_api.soap.exeption.SoapExceptionInterceptor;
+import com.appt.set.web_api.soap.exeption.SoapFaultHandler;
 
 @Configuration
 public class WebServiceConfig extends WsConfigurerAdapter {
@@ -26,20 +26,22 @@ public class WebServiceConfig extends WsConfigurerAdapter {
     }
 
 
-    @Bean
-    public SoapFaultMappingExceptionResolver exceptionResolver(){
-        SoapFaultMappingExceptionResolver exceptionResolver = new DetailSoapFaultDefinitionExceptionResolver();
 
-        SoapFaultDefinition faultDefinition = new SoapFaultDefinition();
+    @Bean SoapFaultMappingExceptionResolver
+    exceptionResolver(){
+        SoapFaultMappingExceptionResolver exceptionResolver = new SoapExceptionInterceptor();
+        SoapFaultDefinition faultDefinition= new SoapFaultDefinition();
         faultDefinition.setFaultCode(SoapFaultDefinition.SERVER);
         exceptionResolver.setDefaultFault(faultDefinition);
 
+     
         Properties errorMappings = new Properties();
-        errorMappings.setProperty(Exception.class.getName(), SoapFaultDefinition.SERVER.toString());
-        errorMappings.setProperty(ServiceFaultException.class.getName(), SoapFaultDefinition.SERVER.toString());
+        errorMappings.setProperty(SoapFaultHandler.class.getName(), SoapFaultDefinition.SERVER.toString());
         exceptionResolver.setExceptionMappings(errorMappings);
         exceptionResolver.setOrder(1);
-        return exceptionResolver;
+        return exceptionResolver;   
+
     }
+
 
 }

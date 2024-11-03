@@ -1,4 +1,4 @@
-package com.appt.set.web_api.config;
+package com.appt.set.web_api.soap.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

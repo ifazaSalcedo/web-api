@@ -39,13 +39,10 @@ public class PersonServicesImplement implements PersonServices {
 
     @Override
     public PersonDto findByRuc(String ruc) {
-        try {
+
             Person person = repository.findByRuc(ruc)
                     .orElseThrow(() -> new PersonNotFountExeption("El ruc no existe o es incorrecto"));
             return factory.createPersonDto(person);
-        } catch (Exception e) {
-            throw new PersonNotFountExeption("No se pudo optener el respuesta de la base de datos");
-        }
     }
 
 }
