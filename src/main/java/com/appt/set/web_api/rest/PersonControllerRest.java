@@ -13,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/consulruc/rest/")
+@RequestMapping("/rest")
 public class PersonControllerRest {
 
 

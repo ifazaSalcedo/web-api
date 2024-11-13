@@ -2,13 +2,11 @@
 // Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
 // Visite https://eclipse-ee4j.github.io/jaxb-ri 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2024.10.30 a las 09:52:20 PM PYST 
+// Generado el: 2024.11.12 a las 09:18:53 PM PYST 
 //
 
 
 package com.appt.set.web_api.soap.contribuyente;
-
-import com.appt.set.web_api.data.dto.PersonDto;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -27,7 +25,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="persondto" type="{http://www.appt.com/set/web_api/soap/contribuyente}personDto"/&gt;
+ *         &lt;element name="persondto" type="{http://www.appt.com/set/web_api/soap/contribuyente}contribuyente"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,26 +33,26 @@ import jakarta.xml.bind.annotation.XmlType;
  * </pre>
  * 
  * 
- */ 
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "persondto"
 })
-@XmlRootElement(name = "getPersonRucResponse")
-public class GetPersonRucResponse {
+@XmlRootElement(name = "getContribuyenteRucResponse")
+public class GetContribuyenteRucResponse {
 
     @XmlElement(required = true)
-    protected PersonDto persondto;
+    protected Contribuyente persondto;
 
     /**
      * Obtiene el valor de la propiedad persondto.
      * 
      * @return
      *     possible object is
-     *     {@link PersonDto }
+     *     {@link Contribuyente }
      *     
      */
-    public PersonDto getPersondto() {
+    public Contribuyente getPersondto() {
         return persondto;
     }
 
@@ -63,10 +61,10 @@ public class GetPersonRucResponse {
      * 
      * @param value
      *     allowed object is
-     *     {@link PersonDto }
+     *     {@link Contribuyente }
      *     
      */
-    public void setPersondto(PersonDto value) {
+    public void setPersondto(Contribuyente value) {
         this.persondto = value;
     }
 
