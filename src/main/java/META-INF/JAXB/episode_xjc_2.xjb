@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
+Visite https://eclipse-ee4j.github.io/jaxb-ri 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2024.11.12 a las 09:17:54 PM PYST 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.appt.com/set/web_api/soap/contribuyente">
+    <schemaBindings map="false">
+      <package name="com.appt.set.web_api.soap.contribuyente"/>
+    </schemaBindings>
+    <bindings scd="tns:getContribuyenteRucRequest">
+      <class ref="com.appt.set.web_api.soap.contribuyente.GetContribuyenteRucRequest"/>
+    </bindings>
+    <bindings scd="tns:getContribuyenteRucResponse">
+      <class ref="com.appt.set.web_api.soap.contribuyente.GetContribuyenteRucResponse"/>
+    </bindings>
+    <bindings scd="~tns:contribuyente">
+      <class ref="com.appt.set.web_api.soap.contribuyente.Contribuyente"/>
+    </bindings>
+    <bindings scd="tns:getContribuyenteListRequest">
+      <class ref="com.appt.set.web_api.soap.contribuyente.GetContribuyenteListRequest"/>
+    </bindings>
+    <bindings scd="tns:getContribuyenteListResponse">
+      <class ref="com.appt.set.web_api.soap.contribuyente.GetContribuyenteListResponse"/>
+    </bindings>
+  </bindings>
+</bindings>
+

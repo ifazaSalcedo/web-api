@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
 // Visite https://eclipse-ee4j.github.io/jaxb-ri 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2024.10.30 a las 09:52:20 PM PYST 
+// Generado el: 2024.11.12 a las 09:18:53 PM PYST 
 //
 
 
@@ -38,8 +38,8 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "ruc"
 })
-@XmlRootElement(name = "getPersonRucRequest")
-public class GetPersonRucRequest {
+@XmlRootElement(name = "getContribuyenteRucRequest")
+public class GetContribuyenteRucRequest {
 
     @XmlElement(required = true)
     protected String ruc;

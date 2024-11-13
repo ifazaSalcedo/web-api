@@ -3,9 +3,8 @@ xmlns:tns="http://www.appt.com/set/web_api/soap/contribuyente"
 targetNamespace="http://www.appt.com/set/web_api/soap/contribuyente" 
 elementFormDefault="qualified">
 
-
     <!--GetRequest object contribuyente by field ruc-->
-    <xs:element name="getPersonRucRequest">
+    <xs:element name="getContribuyenteRucRequest">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name= "ruc" type="xs:string"></xs:element>
@@ -14,16 +13,40 @@ elementFormDefault="qualified">
     </xs:element>
 
     <!--GetResponse object contribuyente by field ruc-->
-    <xs:element name="getPersonRucResponse">
+    <xs:element name="getContribuyenteRucResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name= "persondto" type="tns:personDto"></xs:element>
+                <xs:element name= "persondto" type="tns:contribuyente"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <!--Response objects contribuyentes list-->
+    <xs:element name="getContribuyenteListRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="page" type="xs:int" minOccurs="0"  default="0"/>
+                <xs:element name="size" type="xs:int" minOccurs="0" default="20"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!--Response objects contribuyentes list-->
+    <xs:element name="getContribuyenteListResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="contribuyentes" type="tns:contribuyente" minOccurs="0" maxOccurs="unbounded"/>
+                <!--elementos de paginacion--> 
+                <xs:element name="totalPages" type="xs:int"/>
+                <xs:element name="totalElements" type="xs:int"/>
+                <xs:element name="currentPage" type="xs:int"/>
+                <xs:element name="pageSize" type="xs:int"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
     <!--Person object structure-->
-    <xs:complexType name="personDto">
+    <xs:complexType name="contribuyente">
         <xs:sequence>
             <xs:element name="personId" type="xs:long"></xs:element>
             <xs:element name="name" type="xs:string"></xs:element>
