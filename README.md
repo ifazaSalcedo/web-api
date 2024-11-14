@@ -139,5 +139,5 @@ Para mejorar la seguridad de la API, se está trabajando en una **configuración
    ```bash
    git clone <url-del-repositorio>
    cd <nombre-del-directorio>
-   git checkout desarrollo-security
+   git checkout desarrollo-apy-key-security
 
