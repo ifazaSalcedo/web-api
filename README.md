@@ -135,7 +135,7 @@ Para mejorar la seguridad de la API, se está trabajando en una **configuración
 
 ### Instrucciones para trabajar en la rama de seguridad
 
-1. Clona el repositorio y cambia a la rama `desarrollo-security`:
+1. Clona el repositorio y cambia a la rama `desarrollo-apy-key-security`:
    ```bash
    git clone <url-del-repositorio>
    cd <nombre-del-directorio>
